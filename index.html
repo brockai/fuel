@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Bulk Fuel Mobile</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <img src="assets/img/brockai.png" alt="">
+                <h1 class="sitename">Bulk Fuel Mobile</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html" class="active">Home<br></a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#service-details">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="get-a-demo.html">Get a Demo</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="hero" class="hero section dark-background">
+            <img src="assets/img/world-dotted-map.png" alt="" class="hero-bg" data-aos="fade-in">
+            <div class="container">
+                <div class="row gy-2 d-flex justify-content-between">
+                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                        <h2 data-aos="fade-up">Mobile Bulk Fuel Delivery for Professional Operators</h2>
+                        <p data-aos="fade-up" data-aos-delay="100">Streamline your operations with efficiency and
+                            convenience like never before! Bulk Fuel Mobile is designed to allow your operators and
+                            administrators focus on job at hand and not be bogged down with paperwork.</p>
+                    </div>
+                    <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+                        <img src="assets/images/truck.png" class="img-fluid mb-3 mb-lg-0" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="featured-services" class="featured-services section">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon flex-shrink-0"><i class="bi bi-broadcast"></i></div>
+                        <div>
+                            <h4 class="title">Real-Time Geotab Integration</h4>
+                            <p class="description">
+                                Load and offload times are updated automatically with GPS location tracking, all while
+                                reducing paperwork for operators
+                            </p>
+                            <a href="#geotab" class="readmore stretched-link"><span>Learn More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon flex-shrink-0"><i class="fas fa-crosshairs"></i></div>
+                        <div>
+                            <h4 class="title">OCR Bill of Ladings & Scale Tickets</h4>
+                            <p class="description">Capture Bill of Lading number and volume via camera automatically, eliminate manual entry</p>
+                            <a href="#realtime" class="readmore stretched-link"><span>Learn More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon flex-shrink-0"><i class="fa-solid fa-money-bill-wave"></i></div>
+                        <div>
+                            <h4 class="title">Real-time Fuel & Shift Reports</h4>
+                            <p class="description">Track fuel onboard, loading, delivery and delays, run daily
+                                billing reports with easy-to-use Excel download.
+                            </p>
+                            <a href="#realtimeReport" class="readmore stretched-link"><span>Learn More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6 position-relative align-self-center order-lg-last order-first"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/images/about.png" class="img-fluid" alt="">
+                        <a href="https://github-production-user-asset-6210df.s3.amazonaws.com/142166714/365399902-9dbed0f1-11a2-45e3-976b-5bdfa6b3358e.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241022%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241022T193344Z&X-Amz-Expires=300&X-Amz-Signature=a97173e08825639fce9319f49a31f547c52e7f5b3266e40eba845427b5632021&X-Amz-SignedHeaders=host" class="glightbox pulsating-play-btn"></a>
+                    </div>
+                    <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
+                        <h3>About Us</h3>
+                        <p>
+                            Bulk Fuel Mobile was developed under the leadership of the Birch Mountain management team in close collaboration with experienced field operators and administrators. Their dedication, patience, and hard work were instrumental in bringing Bulk Fuel Mobile to life, and we are deeply grateful for their contributions.
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="bi bi-diagram-3"></i>
+                                <div>
+                                    <h5>Operator-Centric Design</h5>
+                                    <p>
+                                        We collaborated closely with operators to gain insight into their daily workflows, ensuring the app is intuitive and user-friendly for on-the-road use.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-fullscreen-exit"></i>
+                                <div>
+                                    <h5>Operational Efficiency</h5>
+                                    <p>
+                                        Administrators shared valuable insights into workflow and tracking requirements, enabling us to design features that streamline backend operations and enhance reporting efficiency.
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-broadcast"></i>
+                                <div>
+                                    <h5>Real-Time GPS Integration</h5>
+                                    <p>
+                                        We integrated Geotab GPS to automatically log load and offload times when vehicles enter or exit geofenced zones, significantly reducing paperwork for operators.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="call-to-action" class="call-to-action section dark-background">
+            <img src="assets/img/cta-bg.jpg" alt="">
+            <div class="container">
+                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-10">
+                        <div class="text-center">
+                            <h3>Get a Demo</h3>
+                            <p>Schedule an Online to see Bulk Fuel Mobile in Action!</p>
+                            <a class="cta-btn" href="get-a-demo.html">Get a Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="features" class="features section">
+            <div class="container section-title" data-aos="fade-up">
+                <span>Features</span>
+                <h2>Features</h2>
+                <p>Mobility combined with Automation and GPS integration to improve productivity</p>
+            </div>
+            <div class="container">
+                <div id="geotab" class="row gy-4 align-items-center features-item">
+                    <div class="col-md-7 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+                        <img src="assets/images/geotab.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-5" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Real-time Geotab Integration</h3>
+                        <p class="fst-italic">
+                            Load and offload times are automatically updated with GPS location tracking, minimizing paperwork and streamlining the process for operators while providing real-time data insights for administrators and dispatchers
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check"></i><span>Operator does not have to waste time recording loading
+                                    and offloading time</span></li>
+                            <li><i class="bi bi-check"></i> <span>Administrators have access to real-time shift and
+                                    tractor, driver and current load data</span></li>
+                            <li><i class="bi bi-check"></i> <span>Demurrage and delay times are tracked to facilate
+                                    real-time business decisions</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="realtime" class="row gy-4 align-items-center features-item">
+                    <div class="col-md-8 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out"
+                        data-aos-delay="200">
+                        <img src="assets/images/ocrshifts.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-4 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+                        <h3>OCR Bill of Lading & Scale Tickets</h3>
+                        <p class="fst-italic">
+                            Capture Bill oF Lading number and volume as well as scale tickets via camera automatically
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check"></i> <span>Operator does not have to enter data manually</span></li>
+                            <li><i class="bi bi-check"></i> <span>Capture docoument number, volumes & scale weights automatiaclly</span></li>
+                            <li><i class="bi bi-check"></i> <span>Bill of Lading & Scale tickets images captured and available for reporting</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="realtimeReport" class="row gy-4 align-items-center features-item">
+                    <div class="col-md-7 d-flex align-items-center" data-aos="zoom-out">
+                        <img src="assets/images/shifts.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-5" data-aos="fade-up">
+                        <h3>Real-time Fuel Board & Shift Reports</h3>
+                        <p>Fuel onboard and shift duties are tracked upon loading and delivery</p>
+                        <ul>
+                            <li><i class="bi bi-check"></i> <span>Load and offload times are posted real-time to the shift dashboard</span></li>
+                            <li><i class="bi bi-check"></i> <span>Demurrage Time Tracking included in daily shift report</span></li>     
+                            <li><i class="bi bi-check"></i> <span>Real-time data related to driver, tractor, fuel
+                                    onboard, number of loads and Bill of Lading</span></li>
+                            <li><i class="bi bi-check"></i> <span>Daily shift reports used
+                                for billing are downloaded to Excel in a click</span></li>
+                            <li><i class="bi bi-check"></i><span>Easily manage Geotab enabled tractors for
+                                    operators</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="service-details" class="service-details section">
+            <div class="container section-title" data-aos="fade-up">
+                <span>Software Development Services</span>
+                <h2>Software Development Services</h2>
+                <p>Customize or integrate with 3rd party software to fit your workflow</p>
+            </div>
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <p>Bulk Fuel Mobile is a highly customizable software solution designed to streamline fuel delivery operations for your business. Whether you require specific reporting features, integration with third-party software, GPS tracking for fuel deliveries or OCR to read shipping documents, Bulk Fuel Mobile can be tailored to fit your workflow.</p>
+                        <a class="btn btn-primary" href="contact.html" role="button">Contact Us</a>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">        
+                        <h3>Iterative Software Development
+                        </h3>
+                        <p>
+                            An iterative development cycle is a software development approach that breaks down the project into small, manageable segments called iterations. Each iteration goes through the entire software development lifecycle (SDLC) — planning, designing, coding, testing, and deploying — but for a specific subset of features or functionality. This process is repeated in multiple cycles, gradually enhancing the software until the full product is developed.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> <span><b>Planning:</b> The team identifies the objectives, requirements, and features to focus on, the scope of each iteration is kept small and manageable. </span>
+                            </li>
+                            <li><i class="bi bi-check-circle"></i> <span><b>Design:</b> The team agree on a user interface design and associated behaviours based on what was learned from previous iterations, allowing for flexibility and improvements.</span>
+                            </li>
+                            <li><i class="bi bi-check-circle"></i> <span><b>Development:</b> Developers code the features and fucntionality that were planned.</span>
+                            </li>
+                            <li><i class="bi bi-check-circle"></i> <span><b>Testing:</b> Once development of a feature or is complete, the new functionality is tested by our devlopement team and then made available for user acceptance testing by your team.</span>
+                            </li>
+                            <li><i class="bi bi-check-circle"></i> <span><b>Review and Feedback:</b> After testing, the team reviews the results using a working version of the software to gather feedback from stakeholders or users. This feedback is critical and shapes the priorities for the next iteration.</span>
+                            </li>
+                            <li><i class="bi bi-check-circle"></i> <span><b>Deployment:</b> At the end of the iteration, the developed features are automatically deployed to your production environment to be used. This frequent deployment of working software allows the product to evolve and grow incrementally.</span>
+                            </li>
+                            <li><i class="bi bi-check-circle"></i> <span><b>Repeat:</b> After one iteration ends, the process repeats. The team begins the next iteration, incorporating feedback and improving or expanding on the previously developed features.</span>
+                            </li>
+                        </ul>   
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="pricing section">
+            <div class="container section-title" data-aos="fade-up">
+                <span>Pricing</span>
+                <h2>Pricing</h2>
+                <p>Simple No-Nonsense Pricing<br>
+                    * One-time <sup>$</sup>500 setup fee required
+                </p>
+            </div>
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="row gy-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="pricing-item">
+                            <h3>Enterprise Plan</h3>
+                            <h4><sup>$</sup>500<span> / month</span></h4>
+                            <ul>
+                                <li><i class="bi bi-check"></i> <span>Integrate Geotab for free</span></li>
+                                <li><i class="bi bi-check"></i> <span>Integrate OCR for Bill of Lading</span></li>
+                                <li><i class="bi bi-check"></i> <span>Unlimited Drivers & Tractors</span></li>
+                                <li><i class="bi bi-check"></i> <span>Unlimited Admins</span></li>
+                                <li><i class="bi bi-check"></i> <span>100% Uptime &  Daily Backups</span></li>
+                            </ul>
+                            <a href="#" class="buy-btn">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="pricing-item featured">
+                            <h3>Business Plan</h3>
+                            <h4><sup>$</sup>250<span> / month</span></h4>
+                            <ul>
+                                <li><i class="bi bi-check"></i> <span>Integrate Geotab for free</span></li>
+                                <li><i class="bi bi-x" style="color: red;"></i> <span>Integrate OCR for Bill of Lading</span></li>
+                                <li><i class="bi bi-check"></i> <span>50 Drivers & Tractors</span></li>
+                                <li><i class="bi bi-check"></i> <span>5 Admins</span></li>
+                                <li><i class="bi bi-check"></i> <span>100% Uptime &  Daily Backups</span></li>
+                            </ul>
+                            <a href="#" class="buy-btn">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="pricing-item">
+                            <h3>Self-Hosted Plan</h3>
+                            <ul>
+                                <li><i class="bi bi-check"></i> <span>Run in your data center</span></li>
+                                <li><i class="bi bi-check"></i> <span>Run on the cloud, AWS, Amazon, Digital Ocean and more</span></li>
+                                <li><i class="bi bi-check"></i> <span>Add new features as they come available</span></li>
+                                <li><i class="bi bi-check"></i> <span>Automated deployment from github for customizations</span></li>
+                                <li><i class="bi bi-check"></i> <span>Developer training and support for production deployment</span></li>
+                            </ul>
+                            <a href="#" class="buy-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="faq" class="faq section">
+            <div class="container section-title" data-aos="fade-up">
+                <span>Frequently Asked Questions</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="faq-container">
+                            <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                                <i class="faq-icon bi bi-question-circle"></i>
+                                <h3>Can I cancel my account free of charge?</h3>
+                                <div class="faq-content">
+                                    <p>Yes, your account can be cancelled at any time free of charge.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                                <i class="faq-icon bi bi-question-circle"></i>
+                                <h3>Can Bulk Fuel Mobile run on my server or hosting provider?</h3>
+                                <div class="faq-content">
+                                    <p>Yes, Bulk Fuel Mobile can run anywhere. Please contact us to learn more.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                                <i class="faq-icon bi bi-question-circle"></i>
+                                <h3>Are there any licensing fees associated with Bulk Fuel Mobile?</h3>
+                                <div class="faq-content">
+                                    <p>No, Bulk Fuel Mobile is entirely built with OpenSource software.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                                <i class="faq-icon bi bi-question-circle"></i>
+                                <h3>Do I need Geotab to run real-time data integration?</h3>
+                                <div class="faq-content">
+                                    <p>No, however Geotab is used to automatically record load and offload times so that
+                                        the operator does not have to manually enter those times. Shifts and Delivery
+                                        Board are always real-time.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                                <i class="faq-icon bi bi-question-circle"></i>
+                                <h3>Can Bulk Fuel Mobile be customized?</h3>
+                                <div class="faq-content">
+                                    <p>Yes, in fact the system was designed in a modular way so that other components
+                                        and service integrations can be implemented. Please contact us to learn more.
+                                    </p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="react-footer"></div>
+   
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="footer.js" type="text/babel"></script>
+</body>
+
+</html>
+
+<!-- <img src="assets/images/truck.png" alt="" height="400px" class="services-img"> -->
+                       
+       <!-- <br><br>
+
+                        <div>
+                            <img src="assets/images/phone.png" alt="" height="800px" class="services-img">
+                        </div> -->
+
+                    <!-- <a class="cta-btn" href="get-a-demo.html">Get a Demo</a> -->
+
+  <!-- <div class="services-list">
+                            <a href="#">Software Development</a>
+                        </div> -->
+
+                        <!-- <h4>Customization & Integration Services</h4> -->
+  <!-- <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon flex-shrink-0"><i class="fas fa-user-clock"></i></div>
+                        <div>
+                            <h4 class="title">Shifts & Delivery Board</h4>
+                            <p class="description">Use the shifts real-time dashboard to track operator load, delivery
+                                and demurrage time. Track fuel onboard, Bill of Ladings, loads real-time with Delivery
+                                Board.</p>
+                            <a href="#realtime" class="readmore stretched-link"><span>Learn More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div> -->
+
+
+ <!-- <div id="demurrage" class="row gy-4 align-items-center features-item">
+                    <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+                        <img src="assets/img/features-4.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+                        <h3>Delay & Demurrage Time Tracking</h3>
+                        <p class="fst-italic">
+                            Track delay or demurrage to help make real-time business decisions
+                        </p>
+                        <p>
+                            Post delays that are beyond your control directly to the billing report which includes
+                            easy-to-use Excel download
+                        </p>
+                    </div>
+                </div> -->
+
+
+    <!-- <section id="testimonials" class="testimonials section dark-background">
+
+            <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                                <h3>Saul Goodman</h3>
+                                <h4>Ceo &amp; Founder</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
+                                        suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et.
+                                        Maecen aliquam, risus at semper.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                                <h3>Sara Wilsson</h3>
+                                <h4>Designer</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum
+                                        quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat
+                                        irure amet legam anim culpa.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                                <h3>Jena Karlis</h3>
+                                <h4>Store Owner</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla
+                                        quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore
+                                        quis sint minim.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                                <h3>Matt Brandon</h3>
+                                <h4>Freelancer</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
+                                        fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore
+                                        quem dolore labore illum veniam.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                                <h3>John Larson</h3>
+                                <h4>Entrepreneur</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor
+                                        noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam
+                                        esse veniam culpa fore nisi cillum quid.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+        </section> -->
+
+
+        <!-- <section id="services" class="services section">
+            <div class="container section-title" data-aos="fade-up">
+                <span>Our Services<br></span>
+                <h2>Our ServiceS</h2>
+                <p>Our success in developing a robust mobile fuel tracking system has opened up new possibilities.</p>
+            </div>
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/img/service-1.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3>Storage</h3>
+                            <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam
+                                repellendus temporibus itaqueofficiis odit</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/img/service-2.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3><a href="#" class="stretched-link">Logistics</a></h3>
+                            <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt
+                                molestiae dolor ipsam ducimus occaecati nisi</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/img/service-3.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3><a href="#" class="stretched-link">Cargo</a></h3>
+                            <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit
+                                doloremque oluptatem aut et molestiae ut et nihil</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/img/service-4.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3><a href="#" class="stretched-link">Trucking</a></h3>
+                            <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit
+                                doloremque oluptatem aut et molestiae ut et nihil</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/img/service-5.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3>Packaging</h3>
+                            <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum
+                                onsequuntur maiores beatae consequatur magni voluptates</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="assets/img/service-6.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3><a href="#" class="stretched-link">Warehousing</a></h3>
+                            <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi
+                                quisquam aut nostrum unde et qui est non quo nulla</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section> -->
