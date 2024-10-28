@@ -13,6 +13,9 @@ jobs:
       - name: Clone fuel repo
         uses: appleboy/ssh-action@master
         with:
+          host: ${{secrets.DROPLET_IP}}
+          username: ${{ secrets.DROPLET_USERNAME }}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             rm -rf ~/fuel
             git clone -b main https://github.com/brockai/fuel.git
@@ -26,6 +29,9 @@ jobs:
       - name: Deploy node server
         uses: appleboy/ssh-action@master
         with:
+          host: ${{secrets.DROPLET_IP}}
+          username: ${{ secrets.DROPLET_USERNAME }}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             # remove existing node server, copy over node server
             rm /var/www/contact-node -r || true
