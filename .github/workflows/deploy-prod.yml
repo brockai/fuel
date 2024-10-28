@@ -8,50 +8,72 @@ on:
 jobs:
   Clone-fuel: 
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Clone fuel repo
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{secrets.DROPLET_IP}}
-          username: ${{ secrets.DROPLET_USERNAME }}
-          key: ${{secrets.SSH_PRIVATE_KEY}}
-          script: |
-            rm -rf ~/fuel
-            git clone -b main git@github.com:brockai/fuel.git
 
-  Deploy-Node-Server:
-    runs-on: ubuntu-latest
-    needs: Clone-fuel
-    steps:
-      - name: Deploy node server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.DROPLET_IP }}
-          username: ${{ secrets.DROPLET_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            # remove existing node server, copy over node server
-            rm /var/www/contact-node -r || true
-            mkdir /var/www/contact-node || true
-            cp ~/fuel/server/. -r /var/www/contact-node
-            cp ~/.env.contact-node /var/www/contact-node/.env
-            cd /var/www/contact-node
-            npm install
-            pm2 delete "contact"
-            pm2 start contact.js
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up SSH for Deployment
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H your-droplet-ip >> ~/.ssh/known_hosts
+
+      - name: Deploy to DigitalOcean
+        run: |
+          ssh -i ~/.ssh/id_rsa root@146.190.55.9" \
+            git clone -b main git@github.com:brockai/fuel.git
+          "
+
+
+
+
+
+  #     - name: Clone fuel repo
+  #       uses: appleboy/ssh-action@master
+  #       with:
+  #         host: ${{secrets.DROPLET_IP}}
+  #         username: ${{ secrets.DROPLET_USERNAME }}
+  #         key: ${{secrets.SSH_PRIVATE_KEY}}
+  #         script: |
+  #           rm -rf ~/fuel
+  #           git clone -b main git@github.com:brockai/fuel.git
+
+  # Deploy-Node-Server:
+  #   runs-on: ubuntu-latest
+  #   needs: Clone-fuel
+  #   steps:
+  #     - name: Deploy node server
+  #       uses: appleboy/ssh-action@master
+  #       with:
+  #         host: ${{ secrets.DROPLET_IP }}
+  #         username: ${{ secrets.DROPLET_USERNAME }}
+  #         key: ${{ secrets.SSH_PRIVATE_KEY }}
+  #         script: |
+  #           # remove existing node server, copy over node server
+  #           rm /var/www/contact-node -r || true
+  #           mkdir /var/www/contact-node || true
+  #           cp ~/fuel/server/. -r /var/www/contact-node
+  #           cp ~/.env.contact-node /var/www/contact-node/.env
+  #           cd /var/www/contact-node
+  #           npm install
+  #           pm2 delete "contact"
+  #           pm2 start contact.js
             
-  Deploy-Fuel-Website:
-    runs-on: ubuntu-latest
-    needs: Clone-fuel
-    steps:
-      - name: Deploy website
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.DROPLET_IP }}
-          username: ${{ secrets.DROPLET_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd ~/fuel/
-            rm /var/www/fuel -r || true
-            cp ~/fuel -r /var/www/fuel
+  # Deploy-Fuel-Website:
+  #   runs-on: ubuntu-latest
+  #   needs: Clone-fuel
+  #   steps:
+  #     - name: Deploy website
+  #       uses: appleboy/ssh-action@master
+  #       with:
+  #         host: ${{ secrets.DROPLET_IP }}
+  #         username: ${{ secrets.DROPLET_USERNAME }}
+  #         key: ${{ secrets.SSH_PRIVATE_KEY }}
+  #         script: |
+  #           cd ~/fuel/
+  #           rm /var/www/fuel -r || true
+  #           cp ~/fuel -r /var/www/fuel
             
