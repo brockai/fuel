@@ -1,21 +1,21 @@
 // footer.js
 const Footer = () => {
     return (
-        <footer id="footer" class="footer dark-background">
+        <footer id="footer" className="footer dark-background">
 
-            <div class="container footer-top">
-                <div class="row gy-4">
-                    <div class="col-lg-5 col-md-12 footer-about">
-                        <a href="index.html" class="logo d-flex align-items-center">
-                            <span class="sitename">Bulk Fuel Mobile</span>
+            <div className="container footer-top">
+                <div className="row gy-4">
+                    <div className="col-lg-5 col-md-12 footer-about">
+                        <a href="index.html" className="logo d-flex align-items-center">
+                            <span className="sitename">Bulk Fuel Mobile</span>
                         </a>
                         <h6>Mobile Bulk Fuel Delivery for Professional Operators</h6>
-                        <div class="social-links d-flex mt-4">
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        <div className="social-links d-flex mt-4">
+                            <a href=""><i className="bi bi-linkedin"></i></a>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-6 footer-links">
+                    <div className="col-lg-3 col-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
                             <li><a href="index.html">Home</a></li>
@@ -38,20 +38,12 @@ const Footer = () => {
                         </ul>
                     </div> */}
 
-                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                         <h4>Contact Us</h4>
-                        <p class="mt-4"><strong>Phone:</strong> <span>+1 403 465 2151</span></p>
+                        <p className="mt-4"><strong>Phone:</strong> <span>+1 403 465 2151</span></p>
                         <p><strong>Email:</strong> <span>brock@brockai.com</span></p>
                     </div>
 
-                </div>
-            </div>
-
-            <div class="container copyright text-center mt-4">
-                <p>© <span>Copyright</span> <strong class="px-1 sitename">Logis</strong> <span>All Rights Reserved</span>
-                </p>
-                <div class="credits">
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                 </div>
             </div>
 

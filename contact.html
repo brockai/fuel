@@ -7,6 +7,8 @@
     <title>Contact - Bulk Fuel Mobile</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <meta name="apiurl" content="http://localhost:9002">
+    <!-- <meta name="apiurl" content="https://contact.brockai.com"> -->
 
     <!-- Favicons -->
     <link href="assets/img/favicon.ico" rel="icon">
@@ -76,11 +78,8 @@
         </div>
 
         <section id="contact" class="contact section">
-
             <div class="container" data-aos="fade-up" data-aos-delay="100">
-
                 <div class="row gy-4">
-
                     <div class="col-lg-4">
                         <!-- <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                             <i class="bi bi-geo-alt flex-shrink-0"></i>
@@ -97,7 +96,6 @@
                                 <p>+1 403 465 2151</p>
                             </div>
                         </div>
-
                         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
                             <i class="bi bi-envelope flex-shrink-0"></i>
                             <div>
@@ -106,32 +104,27 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-8">
                         <form id="contactForm" method="post" class="php-email-form" data-aos="fade-up"
                             data-aos-delay="200">
                             <div class="row gy-4">
-
                                 <div class="col-md-6">
                                     <input id="name" type="text" name="name" class="form-control"
                                         placeholder="Your Name" required="">
                                 </div>
-
                                 <div class="col-md-6 ">
                                     <input id="email" type="email" class="form-control" name="email"
                                         placeholder="Your Email" required="">
                                 </div>
-
                                 <div class="col-md-12">
                                     <input id="subject" type="text" class="form-control" name="subject"
                                         placeholder="Subject" required="">
                                 </div>
-
                                 <div class="col-md-12">
                                     <textarea id="message" class="form-control" name="message" rows="6"
                                         placeholder="Message" required=""></textarea>
                                 </div>
-
+                                <input id="jCaptcha" class="jCaptcha" type="text" placeholder="Type in result please">
                                 <div class="col-md-12 text-center">
                                     <div class="loading">Loading</div>
                                     <div class="error-message"></div>
@@ -139,18 +132,12 @@
 
                                     <button type="submit">Send Message</button>
                                 </div>
-
                             </div>
                         </form>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
-
     </main>
 
     <div id="react-footer"></div>
@@ -159,41 +146,17 @@
 
     <div id="preloader"></div>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+   
+    <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="footer.js" type="text/babel"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: '-',
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-
-            axios.post('http://localhost:3002/email', formData, {
-                headers: {
-                    'x-api-key': 'PlsL3tM3!n'
-                }
-            })
-            .then(function (response) {
-                document.getElementById('responseMessage').textContent = 'Form submitted successfully!';
-                console.log('Success:', response.data);
-            })
-            .catch(function (error) {
-                document.getElementById('responseMessage').textContent = 'Error submitting the form.';
-                console.error('Error:', error);
-            });
-        });
-    </script>
-
+    <script src="assets/vendor/captcha/index.min.js"></script>
+    <script src="assets/vendor/brockai/validate-contact.js"></script>
+    
 </body>
 
 </html>

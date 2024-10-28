@@ -1,8 +1,10 @@
 const express = require('express')
 const VerifyAPIKey = require('../helper');
-const { email } = require('../controllers')
+const { email, key } = require('../controllers')
 
 const router = express.Router()
+
+router.get('/key', key)
 
 router.post('/email', VerifyAPIKey, email)
 

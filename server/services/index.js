@@ -1,20 +1,17 @@
 const nodemailer = require('nodemailer')
-const { Client } = require('@opensearch-project/opensearch')
-var jwt = require('jsonwebtoken')
 const path = require('path')
 const ejs = require('ejs')
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') })
-const { ocrSpace } = require('ocr-space-api-wrapper')
 const { handleServiceError } = require('./handlerServiceError')
-const app = require('../email')
+const app = require('../contact')
 
 const transporter = nodemailer.createTransport({
 	host: 'smtp.office365.com',
 	port: 587,
 	secure: false, // use TLS
 	auth: {
-		user: process.env.OFFICE365_USER,
-		pass: process.env.OFFICE365_PASS
+		user: 'brock@brockai.com',
+		pass: 'S1mple403'
 	},
 	tls: {
 		ciphers: 'SSLv3'
@@ -22,7 +19,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const emailService = async (req) => {
-
+	console.log(req.body)
 	ejs.renderFile(path.join(__dirname, '../views', 'contact.ejs'), {
 		name: req.body.name,
 		email: req.body.email,
@@ -40,10 +37,11 @@ const emailService = async (req) => {
 			subject: req.body.subject,
 			html: html
 		};
-
+console.log(mailOptions)
 		return new Promise((resolve, reject) => {
 			transporter.sendMail(mailOptions, (error, info) => {
 				if (error) {
+					console.log(error)
 					return reject(handleServiceError(error));
 				}
 				resolve({
@@ -55,4 +53,11 @@ const emailService = async (req) => {
 	});
 };
 
-module.exports = { emailService }
+const keyService = (req) => {
+	return {
+		statusCode: 200,
+		body: process.env.API_KEY
+	}
+};
+
+module.exports = { emailService, keyService }

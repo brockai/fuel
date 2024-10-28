@@ -6,24 +6,24 @@ on:
       - main
 
 jobs:
-  Clone-bmel: 
+  Clone-fuel: 
     runs-on: ubuntu-latest
     steps:
-      - name: Clone bmel repo
+      - name: Clone fuel repo
         uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.DROPLET_IP}}
           username: ${{ secrets.DROPLET_USERNAME }}
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
-            rm -rf ~/bmel
+            rm -rf ~/fuel
             eval `ssh-agent -s`
             ssh-addm~/.ssh/git_id_rsa
-            git clone -b main git@github.com:brockai/bmel.git
+            git clone -b main git@github.com:brockai/fuel.git
 
   Deploy-Node-Server:
     runs-on: ubuntu-latest
-    needs: Clone-bmel
+    needs: Clone-fuel
     steps:
       - name: Deploy node server
         uses: appleboy/ssh-action@master
@@ -33,47 +33,27 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # remove existing node server, copy over node server
-            rm /var/www/bmel-node -r || true
-            mkdir /var/www/bmel-node || true
-            cp ~/bmel/server/. -r /var/www/bmel-node
-            cp ~/bmel/server/geotab -r /var/www/bmel-node
-            cp ~/bmel/server/opensearch -r /var/www/bmel-node
-            cp ~/.env.bmel-node /var/www/bmel-node/.env
-            cd /var/www/bmel-node
+            rm /var/www/contact-node -r || true
+            mkdir /var/www/contact-node || true
+            cp ~/fuel/server/. -r /var/www/contact-node
+            cp ~/.env.contact-node /var/www/contact-node/.env
+            cd /var/www/contact-node
             npm install
-            pm2 delete "geotab"
-            pm2 delete "opensearch"
-            pm2 start geotab/geotab.js
-            pm2 start opensearch/opensearch.js
+            pm2 delete "contact"
+            pm2 start contact.js
             
-  Deploy-Bmel-Client:
+  Deploy-Fuel-Website:
     runs-on: ubuntu-latest
-    needs: Clone-bmel
+    needs: Clone-fuel
     steps:
-      - name: Deploy client
+      - name: Deploy website
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.DROPLET_IP }}
           username: ${{ secrets.DROPLET_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-            use 18.17.0
-
-            cd ~/bmel/client/
-            rm /var/www/bmel -r || true
-            cp ~/bmel/client -r /var/www/bmel
-            cp ~/.env.local /var/www/bmel/.env.local
-            cd /var/www/bmel
-            npm install
-            npm run build
-            if [ $? -eq 0 ]; then
-              pm2 delete "bmel-client"
-              pm2 start npm --name "bmel-client" -- start
-            else
-              echo "Build failed, deployment aborted."
-              exit 1
-            fi
+            cd ~/fuel/
+            rm /var/www/fuel -r || true
+            cp ~/fuel -r /var/www/fuel
+            
