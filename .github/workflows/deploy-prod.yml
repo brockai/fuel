@@ -23,7 +23,7 @@ jobs:
 
       - name: Deploy to DigitalOcean
         run: |
-          ssh -i ~/.ssh/id_rsa root@146.190.55.9" \
+          ssh -i ~/.ssh/id_rsa ${{ secrets.DROPLET_USERNAME }}@${{secrets.DROPLET_IP}} " \
             git clone -b main git@github.com:brockai/fuel.git
           "
 
