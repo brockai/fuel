@@ -17,7 +17,7 @@ jobs:
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             rm -rf ~/fuel
-            git clone -b main https://github.com/brockai/fuel.git
+            git clone -b main git@github.com:brockai/fuel.git
 
   Deploy-Node-Server:
     runs-on: ubuntu-latest
