@@ -17,8 +17,6 @@ jobs:
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             rm -rf ~/fuel
-            eval `ssh-agent -s`
-            ssh-addm~/.ssh/git_id_rsa
             git clone -b main git@github.com:brockai/fuel.git
 
   Deploy-Node-Server:
