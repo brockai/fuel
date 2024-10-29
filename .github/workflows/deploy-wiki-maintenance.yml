@@ -18,7 +18,7 @@ jobs:
             username: ${{ secrets.DROPLET_USERNAME }}
             key: ${{secrets.SSH_PRIVATE_KEY}}
             script: |
-              git clone https://github.com/fuel/wiki wiki
+              git clone https://github.com/brockai/fuel/wiki wiki
               # git clone https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}.wiki.git wiki
             
       - name: Deploy wiki to /docs
