@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-
       - name: Checkout the wiki repository
         run: |
           uses: appleboy/ssh-action@master
