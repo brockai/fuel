@@ -11,7 +11,7 @@ const Footer = () => {
                         </a>
                         <h6>Mobile Bulk Fuel Delivery for Professional Operators</h6>
                         <div className="social-links d-flex mt-4">
-                            <a href=""><i className="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/brock-clayton-403" target="new"><i className="bi bi-linkedin"></i></a>
                         </div>
                     </div>
 

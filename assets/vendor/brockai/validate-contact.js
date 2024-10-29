@@ -1,10 +1,8 @@
 (function () {
     "use strict";
-
     let forms = document.querySelectorAll('.php-email-form');
     const maxNumberOfTries = 5;
     const apiUrl = document.querySelector('meta[name="apiurl"]').getAttribute('content');
-
     let submitForm = false;
     let myCaptcha = new jCaptcha({
         el: '.jCaptcha',
@@ -41,7 +39,6 @@
             }
         }
     });
-
     forms.forEach(function (e) {
         e.addEventListener('submit', function (event) {
             event.preventDefault();
@@ -51,30 +48,30 @@
                 thisForm.querySelector('.loading').classList.add('d-block');
                 thisForm.querySelector('.error-message').classList.remove('d-block');
                 thisForm.querySelector('.sent-message').classList.remove('d-block');
-
                 axios.get(apiUrl+'/key').then(function (response) {
-
-                    // document.getElementById('responseMessage').textContent = 'Form submitted successfully!';
-                    console.log('Success:', response.data);
-
                     if (response.data) {
                         let formData = new FormData(thisForm);
                         formData = {
                             name: document.getElementById('name').value,
                             email: document.getElementById('email').value,
-                            phone: '',
-                            subject: document.getElementById('subject').value,
+                            phone: '-',
+                            subject: 'Contact: '+document.getElementById('subject').value,
                             message: document.getElementById('message').value
                         };
-        
                         axios.post(apiUrl+'/email', formData, {
                             headers: {
                                 'x-api-key': response.data
                             }
                         })
-                        .then(function (response) {
-                            document.getElementById('responseMessage').textContent = 'Form submitted successfully!';
-                            console.log('Success:', response.data);
+                        .then(function () {
+                            document.getElementById('name').value = '';
+                            document.getElementById('email').value = '';
+                            document.getElementById('subject').value = '';
+                            document.getElementById('message').value = '';
+
+                            thisForm.querySelector('.loading').classList.remove('d-block');
+                            thisForm.querySelector('.error-message').classList.remove('d-block');
+                            thisForm.querySelector('.sent-message').classList.add('d-block');
                         })
                         .catch(function (error) {
                             displayError(thisForm, error.message)
@@ -86,12 +83,10 @@
                 });
             }
         });
-
         function displayError(thisForm, error) {
             thisForm.querySelector('.loading').classList.remove('d-block');
             thisForm.querySelector('.error-message').innerHTML = error;
             thisForm.querySelector('.error-message').classList.add('d-block');
         }
     });
-
 })();
