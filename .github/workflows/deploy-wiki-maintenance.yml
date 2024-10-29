@@ -15,7 +15,7 @@ jobs:
 
       - name: Checkout the wiki repository
         run: |
-          git clone https://github.com/brockai/bmel.wiki.git wiki
+          git clone https://github.com/fuel/wiki wiki
           # git clone https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}.wiki.git wiki
           
       - name: Deploy wiki to /docs
