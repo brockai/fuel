@@ -3,6 +3,7 @@
 
     let forms = document.querySelectorAll('.php-email-form');
     const maxNumberOfTries = 5;
+    const apiUrl = document.querySelector('meta[name="apiurl"]').getAttribute('content');
 
     let submitForm = false;
     let myCaptcha = new jCaptcha({
@@ -51,7 +52,7 @@
                 thisForm.querySelector('.error-message').classList.remove('d-block');
                 thisForm.querySelector('.sent-message').classList.remove('d-block');
 
-                axios.get(apiurl+'/key').then(function (response) {
+                axios.get(apiUrl+'/key').then(function (response) {
 
                     // document.getElementById('responseMessage').textContent = 'Form submitted successfully!';
                     console.log('Success:', response.data);
@@ -66,7 +67,7 @@
                             message: document.getElementById('message').value
                         };
         
-                        axios.post(apiurl+'/email', formData, {
+                        axios.post(apiUrl+'/email', formData, {
                             headers: {
                                 'x-api-key': response.data
                             }
