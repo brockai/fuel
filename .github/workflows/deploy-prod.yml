@@ -8,7 +8,7 @@ on:
 jobs:
   Clone-fuel: 
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Clone fuel repo
         uses: appleboy/ssh-action@master
@@ -22,10 +22,16 @@ jobs:
             rm /var/www/fuel -r || true
             cp ~/fuel -r /var/www/fuel
 
-  Deploy-Node-Server:
-    runs-on: ubuntu-latest
-    needs: Clone-fuel
-    steps:
+      - name: Deploy maintenance page
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: ${{ secrets.DROPLET_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            mv /var/www/fuel/index.html /var/www/fuel/index_backup.html || true
+            cp ~/fuel/maintenance.html /var/www/fuel/index.html
+
       - name: Deploy node server
         uses: appleboy/ssh-action@master
         with:
@@ -42,3 +48,13 @@ jobs:
             npm install
             pm2 delete "contact"
             pm2 start contact.js
+
+      - name: Copy fuel site
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.DROPLET_IP}}
+          username: ${{ secrets.DROPLET_USERNAME }}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          script: |
+            rm /var/www/fuel -r || true
+            cp ~/fuel -r /var/www/fuel
