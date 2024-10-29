@@ -15,9 +15,15 @@ jobs:
 
       - name: Checkout the wiki repository
         run: |
-          git clone https://github.com/fuel/wiki wiki
-          # git clone https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}.wiki.git wiki
-          
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{secrets.DROPLET_IP}}
+            username: ${{ secrets.DROPLET_USERNAME }}
+            key: ${{secrets.SSH_PRIVATE_KEY}}
+            script: |
+              git clone https://github.com/fuel/wiki wiki
+              # git clone https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}.wiki.git wiki
+            
       - name: Deploy wiki to /docs
         run: |
           rm -rf docs
