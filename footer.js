@@ -41,7 +41,7 @@ const Footer = () => {
                     <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                         <h4>Contact Us</h4>
                         <p className="mt-4"><strong>Phone:</strong> <span>+1 403 465 2151</span></p>
-                        <p><strong>Email:</strong> <span>brock@brockai.com</span></p>
+                        <p><strong>Email:</strong> <span>bclayton403@gmail.com</span></p>
                     </div>
 
                 </div>
