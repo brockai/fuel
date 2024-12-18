@@ -2,7 +2,6 @@ const nodemailer = require('nodemailer')
 const path = require('path')
 const ejs = require('ejs')
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') })
-const { handleServiceError } = require('./handlerServiceError')
 const app = require('../contact')
 
 const transporter = nodemailer.createTransport({
@@ -10,8 +9,8 @@ const transporter = nodemailer.createTransport({
 	port: 587,
 	secure: false, // use TLS
 	auth: {
-		user: 'brock@brockai.com',
-		pass: 'S1mple403'
+		user: process.env.OFFICE365_USER,
+		pass: process.env.OFFICE365_PASS
 	},
 	tls: {
 		ciphers: 'SSLv3'
