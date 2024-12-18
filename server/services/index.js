@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer')
 const path = require('path')
 const ejs = require('ejs')
-require('dotenv').config({ path: path.resolve(__dirname, '../../.env') })
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const app = require('../contact')
 
 const transporter = nodemailer.createTransport({
