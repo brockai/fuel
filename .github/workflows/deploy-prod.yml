@@ -22,16 +22,6 @@ jobs:
             rm /var/www/fuel -r || true
             cp ~/fuel -r /var/www/fuel
 
-      - name: Deploy maintenance page
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.DROPLET_IP }}
-          username: ${{ secrets.DROPLET_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            mv /var/www/fuel/index.html /var/www/fuel/index_backup.html || true
-            cp ~/fuel/maintenance.html /var/www/fuel/index.html
-
       - name: Deploy node server
         uses: appleboy/ssh-action@master
         with:
