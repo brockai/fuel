@@ -54,7 +54,7 @@
                             name: document.getElementById('name').value,
                             phone: document.getElementById('phone').value,
                             email: document.getElementById('email').value,
-                            subject: 'Demo Request',
+                            subject: 'Bulk Fuel Mobile Demo Request',
                             message: document.getElementById('message').value
                         };
                         axios.post(apiUrl+'/email', formData, {
