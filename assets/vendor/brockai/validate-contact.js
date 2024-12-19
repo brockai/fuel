@@ -3,6 +3,7 @@
     let forms = document.querySelectorAll('.php-email-form');
     const maxNumberOfTries = 5;
     const apiUrl = document.querySelector('meta[name="apiurl"]').getAttribute('content');
+    console.log(apiUrl)
     let submitForm = false;
     let myCaptcha = new jCaptcha({
         el: '.jCaptcha',
@@ -17,7 +18,6 @@
         },
         callback: (response, $captchaInputElement, numberOfTries) => {
             if (maxNumberOfTries === numberOfTries) {
-                document.querySelector('form').removeEventListener('submit', formSubmit);
                 $captchaInputElement.classList.add('disabled');
                 $captchaInputElement.placeholder = 'Maximum attempts reached!';
                 $captchaInputElement.setAttribute('disabled', 'true');

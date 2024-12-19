@@ -41,7 +41,7 @@ const emailService = async (req) => {
 
 		const mailOptions = {
 			from: process.env.OFFICE365_USER,
-			to: process.env.OFFICE365_USER,
+			to: process.env.TO_EMAIL,
 			subject: req.body.subject,
 			html: html,
 		};
