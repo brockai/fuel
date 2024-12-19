@@ -3,7 +3,6 @@
     let forms = document.querySelectorAll('.php-email-form');
     const maxNumberOfTries = 5;
     const apiUrl = document.querySelector('meta[name="apiurl"]').getAttribute('content');
-    
     let submitForm = false;
     let myCaptcha = new jCaptcha({
         el: '.jCaptcha',
