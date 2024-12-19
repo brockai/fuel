@@ -17,7 +17,6 @@
         },
         callback: (response, $captchaInputElement, numberOfTries) => {
             if (maxNumberOfTries === numberOfTries) {
-                document.querySelector('form').removeEventListener('submit', formSubmit);
                 $captchaInputElement.classList.add('disabled');
                 $captchaInputElement.placeholder = 'Maximum attempts reached!';
                 $captchaInputElement.setAttribute('disabled', 'true');
