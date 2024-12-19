@@ -12,6 +12,7 @@ const Footer = () => {
                         <h6>Mobile Bulk Fuel Delivery for Professional Operators</h6>
                         <div className="social-links d-flex mt-4">
                             <a href="https://www.linkedin.com/in/brock-clayton-403" target="new"><i className="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/brockai" target="new"><i className="bi bi-github"></i></a>
                         </div>
                     </div>
 
@@ -19,6 +20,7 @@ const Footer = () => {
                         <h4>Useful Links</h4>
                         <ul>
                             <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#testimonials">Testimonials</a></li>
                             <li><a href="index.html#about">About us</a></li>
                             <li><a href="index.html#features">Features</a></li>
                             <li><a href="index.html#service-details">Services</a></li>
