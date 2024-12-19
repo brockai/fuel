@@ -4,3 +4,4 @@
 /nodemon.json
 /package-lock.json
 /.babelrc
+/server/.env
