@@ -21,14 +21,22 @@ const Footer = () => {
                             <li><a href="index.html#testimonials">Testimonials</a></li>
                             <li><a href="index.html#features">Features</a></li>
                             <li><a href="index.html#service-details">Services</a></li>
+                            <li><a href="index.html#pricing">Pricing</a></li>
                             <li><a href="tos.html">Terms of service</a></li>
                             <li><a href="privacy.html">Privacy policy</a></li>
                         </ul>
                     </div>
                     <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                        <h4>Contact Us</h4>
+                        <h4>Contact</h4>
                         <p className="mt-4"><strong>Phone:</strong> <span>+1 403 465 2151</span></p>
                         <p><strong>Email:</strong> <span>bclayton403@gmail.com</span></p>
+                        <br></br>
+                        <span className="footer-links">
+                            <ul>
+                                <li><a href="constact.html">Contact Us</a></li>
+                                <li><a href="demo.html">Det a Demo</a></li>
+                            </ul>
+                        </span>
                     </div>
                 </div>
             </div>
