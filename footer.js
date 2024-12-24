@@ -34,7 +34,7 @@ const Footer = () => {
                         <span className="footer-links">
                             <ul>
                                 <li><a href="constact.html">Contact Us</a></li>
-                                <li><a href="demo.html">Det a Demo</a></li>
+                                <li><a href="demo.html">Get a Demo</a></li>
                             </ul>
                         </span>
                     </div>
