@@ -50,7 +50,6 @@
                 axios.get(apiUrl+'/key').then(function(response) {
                     if (response.data) {
                         let formData = new FormData(thisForm);
-                        console.log(document.getElementById('name').value, document.getElementById('phone').value, document.getElementById('email').value,)
                         formData = {
                             name: document.getElementById('name').value,
                             phone: document.getElementById('phone').value,
@@ -67,7 +66,6 @@
                             document.getElementById('name').value = '';
                             document.getElementById('email').value = '';
                             document.getElementById('phone').value = '';
-                            // document.getElementById('message').value = '';
                             thisForm.querySelector('.loading').classList.remove('d-block');
                             thisForm.querySelector('.error-message').classList.remove('d-block');
                             thisForm.querySelector('.sent-message').classList.add('d-block');
