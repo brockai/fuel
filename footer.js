@@ -5,7 +5,7 @@ const Footer = () => {
                 <div className="row gy-4">
                     <div className="col-lg-5 col-md-12 footer-about">
                         <a href="index.html" className="logo d-flex align-items-center">
-                            <span className="sitename">Bulk Fuel Mobile</span>
+                            <span className="sitename">FuelBadger</span>
                         </a>
                         <h6>Mobile Bulk Fuel Delivery for Professional Operators</h6>
                         <div className="social-links d-flex mt-4">
@@ -29,11 +29,11 @@ const Footer = () => {
                     <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                         <h4>Contact</h4>
                         <p className="mt-4"><strong>Phone:</strong> <span>+1 403 465 2151</span></p>
-                        <p><strong>Email:</strong> <span>bclayton403@gmail.com</span></p>
+                        <p><strong>Email:</strong> <span>brock@brockai.com</span></p>
                         <br></br>
                         <span className="footer-links">
                             <ul>
-                                <li><a href="constact.html">Contact Us</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
                                 <li><a href="demo.html">Get a Demo</a></li>
                             </ul>
                         </span>
